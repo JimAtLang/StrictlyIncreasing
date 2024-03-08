@@ -9,18 +9,18 @@ public class Digits {
         Stack<Integer> s = new Stack<>();
         while (unArrayed>0){
             int newDigit = unArrayed%10;
-            System.out.println("new digit: " + newDigit);
+            //System.out.println("new digit: " + newDigit);
             s.push(newDigit);
             unArrayed/=10;
-            System.out.println("unarrayed: " + unArrayed);
+            //System.out.println("unarrayed: " + unArrayed);
         }
         while(!s.empty()){
             digits.add(s.pop());
         }
-        System.out.println("The digits are:");
-        for(int digit:digits){
-            System.out.println(digit);
-        }
+        // System.out.println("The digits are:");
+        // for(int digit:digits){
+        //     System.out.println(digit);
+        // }
     }
     public ArrayList<Integer> getDigits() {
 
@@ -34,11 +34,11 @@ public class Digits {
     }
     public boolean isStrictlyIncreasing(){
         int prevDigit = digits.get(0);
-        for(int i = 1; i <digits.size();i++){
-            if(digits.get(i)<=prevDigit){
+        for(int digit:digits){
+            if(digit<=prevDigit){
                 return false;
             }
-            prevDigit=digits.get(i);
+            prevDigit=digit;
         }
         return true;
     }
