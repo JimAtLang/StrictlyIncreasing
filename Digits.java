@@ -4,6 +4,14 @@ import java.util.Stack;
 public class Digits {
     private ArrayList<Integer> digits;
     public Digits(int number){
+        digits = new ArrayList<>();
+         while (number>0){
+            digits.add(number%10);
+            number = number/10;
+
+         }
+        
+
     }
     public ArrayList<Integer> getDigits() {
         return digits;
@@ -15,6 +23,7 @@ public class Digits {
         return digits.get(n);
     }
     public boolean isStrictlyIncreasing(){
+        
         return false;
     }
 }
