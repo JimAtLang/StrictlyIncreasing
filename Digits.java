@@ -1,9 +1,16 @@
 import java.util.ArrayList;
-import java.util.Stack;
 
 public class Digits {
     private ArrayList<Integer> digits;
     public Digits(int number){
+        digits = new ArrayList<>();
+        while(number > 0){
+            digits.add(number%10);
+            number = number/10;
+        }
+        for(int digit:digits){
+            System.out.println(digit);
+        }
     }
     public ArrayList<Integer> getDigits() {
         return digits;
